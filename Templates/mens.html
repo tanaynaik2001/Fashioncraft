@@ -1,0 +1,158 @@
+{% load static %} {% static "Images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashioncraft | Mens</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylemens.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="brand">
+          <h1>Fashioncraft</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <span class="men"><a href="mens.html">Mens</a></span>
+            </li>
+            <li><a href="/Females/females">Females</a></li>
+            <li><a href="/Kids/kids">Kids</a></li>
+            {% if user.is_authenticated %}
+            <li id="brand">Hello,{{user.username}}</li>
+            <li>
+              <span class="sign-in"
+                ><a href="/accounts/signout">Sign-Out</a></span
+              >
+            </li>
+            {% else %}
+            <li>
+              <span class="sign-in"
+                ><a href="/accounts/signin">Sign-In</a></span
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="wrapper">
+      <div class="showcase">
+        <div class="image5">
+          <img
+            src="{% static 'Images/mens5.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1299/-</p>
+        </div>
+
+        <div class="image2">
+          <img src="{% static 'Images/mens2.jpg' %}" alt="Mens" />
+          <p>Price : Rs 1799/-</p>
+        </div>
+
+        <div class="image3">
+          <img
+            src="{% static 'Images/mens3.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1399/-</p>
+        </div>
+
+        <div class="image1">
+          <img
+            src="{% static 'Images/mens1.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1499/-</p>
+        </div>
+
+        <div class="image6">
+          <img
+            src="{% static 'Images/mens6.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1599/-</p>
+        </div>
+
+        <div class="image4">
+          <img
+            src="{% static 'Images/mens4.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1999/-</p>
+        </div>
+
+        <div class="image7">
+          <img
+            src="{% static 'Images/mens7.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 2099/-</p>
+        </div>
+
+        <div class="image8">
+          <img
+            src="{% static 'Images/mens8.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1549/-</p>
+        </div>
+
+        <div class="image9">
+          <img
+            src="{% static 'Images/mens9.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1499/-</p>
+        </div>
+
+        <div class="image10">
+          <img
+            src="{% static 'Images/mens10.jpg' %}"
+            alt="Mens"
+            height="501px"
+            width="332px"
+          />
+          <p>Price : Rs 899/-</p>
+        </div>
+
+        <div class="image11">
+          <img
+            src="{% static 'Images/mens11.jpg' %}"
+            alt="Mens"
+            height="501px"
+          />
+          <p>Price : Rs 1699/-</p>
+        </div>
+        <div class="image12">
+          <img
+            src="{% static 'Images/mens12.jpg' %}"
+            alt="Mens"
+            height="501px"
+            width="340px"
+          />
+          <p>Price : Rs 1299/-</p>
+        </div>
+      </div>
+
+      <button class="redirect"><a href="/">Home</a></button>
+    </section>
+
+    <footer>
+      <p>Fashioncraft &copy; Since 2020</p>
+    </footer>
+  </body>
+</html>

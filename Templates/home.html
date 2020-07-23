@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashioncraft | Home</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylehome.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="brand">
+          <h1>Fashioncraft</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="Mens/mens">Mens</a></li>
+            <li><a href="Females/females">Females</a></li>
+            <li><a href="Kids/kids">Kids</a></li>
+            {% if user.is_authenticated %}
+            <li id="brand">Hello,{{user.username}}</li>
+            <li>
+              <span class="sign-in"
+                ><a href="/accounts/signout">Sign-Out</a></span
+              >
+            </li>
+            {% else %}
+            <li>
+              <span class="sign-in"><a href="accounts/signin">Sign-In</a></span>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="showcase">
+      <!--<div class="background">
+            <img src="./images/home_page.jpg" alt="">
+        </div>-->
+
+      <div class="container">
+        <div class="corona">
+          <h4>We care for you : Stay home, stay safe</h4>
+        </div>
+
+        <div class="moto">
+          <h2>Be you!</h2>
+          <h3>Be confident!</h3>
+          <h4>Be bold!</h4>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <ul>
+          <li><a href="about/about">About</a></li>
+          <li><a href="help/help">Help</a></li>
+          <li><a href="Suggestions/suggestion">Suggesstions</a></li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        Fashioncraft &copy; Since 2020
+      </div>
+    </footer>
+  </body>
+</html>

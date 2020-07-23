@@ -1,0 +1,162 @@
+{% load static %} {% static "Images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashioncraft | Females</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylefemales.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="brand">
+          <h1>Fashioncraft</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="/Mens/mens">Mens</a></li>
+            <li>
+              <span class="female"><a href="females.html">Females</a></span>
+            </li>
+            <li><a href="/Kids/kids">Kids</a></li>
+            {% if user.is_authenticated %}
+            <li id="brand">Hello,{{user.username}}</li>
+            <li>
+              <span class="sign-in"
+                ><a href="/accounts/signout">Sign-Out</a></span
+              >
+            </li>
+            {% else %}
+            <li>
+              <span class="sign-in"
+                ><a href="/accounts/signin">Sign-In</a></span
+              >
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="wrapper">
+      <div class="showcase">
+        <div class="image1">
+          <img
+            src="{% static 'Images/females1.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1399/-</p>
+        </div>
+
+        <div class="image2">
+          <img
+            src="{% static 'Images/females2.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1599/-</p>
+        </div>
+
+        <div class="image3">
+          <img
+            src="{% static 'Images/females3.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1499/-</p>
+        </div>
+
+        <div class="image4">
+          <img
+            src="{% static 'Images/females4.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1799/-</p>
+        </div>
+
+        <div class="image5">
+          <img
+            src="{% static 'Images/females5.jpg' %}"
+            alt="Females"
+            height="501px"
+            width="340px"
+          />
+          <p>Price : Rs 1549/-</p>
+        </div>
+
+        <div class="image6">
+          <img
+            src="{% static 'Images/females6.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 2099/-</p>
+        </div>
+
+        <div class="image7">
+          <img
+            src="{% static 'Images/females7.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1099/-</p>
+        </div>
+
+        <div class="image8">
+          <img
+            src="{% static 'Images/females8.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1499/-</p>
+        </div>
+
+        <div class="image9">
+          <img
+            src="{% static 'Images/females9.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1999/-</p>
+        </div>
+
+        <div class="image10">
+          <img
+            src="{% static 'Images/females10.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1599/-</p>
+        </div>
+
+        <div class="image11">
+          <img
+            src="{% static 'Images/females11.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1049/-</p>
+        </div>
+
+        <div class="image12">
+          <img
+            src="{% static 'Images/females12.jpg' %}"
+            alt="Females"
+            height="501px"
+          />
+          <p>Price : Rs 1599/-</p>
+        </div>
+      </div>
+
+      <button class="redirect"><a href="/">Home</a></button>
+    </section>
+
+    <footer>
+      <p>Fashioncraft &copy; Since 2020</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashioncraft | Sign-In</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylesignin.css' %}">
+</head>
+<body>
+    <section class="showcase">
+        <h2>Be a proud Fashioncraftsmen!</h2>
+        <div>
+            {% for message in messages %}
+            <h2>{{message}}</h2>
+            {% endfor %}
+        </div>
+
+            
+        <!--FORM-->
+        <div class="sign-in">
+            <h1>Sign-In</h1>
+            <form action="signin" method="post">
+                {% csrf_token %}
+                <div class="email">
+                    <label for="">Username : </label><br>
+                    <input type="text" name="username" id="" placeholder="Enter your username...">
+                </div>
+
+                <div class="password">
+                    <label for="">Password : </label><br>
+                    <input type="password" name="password" id="" placeholder="Enter your password...">
+                </div>
+                <button type="submit" class="btn">Sign-In</button>
+            </form>
+
+            
+            <hr>
+            <!--SIGN UP REDIRECT-->
+            <h3>Create account?</h3>
+            <h4>Become a Fashioncraftsmen</h4>
+            <button class="sign-up"><a href="/accounts/signup">Sign-Up</a></button>
+        </div>
+    </section>
+</body>
+</html>
